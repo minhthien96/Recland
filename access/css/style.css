@@ -157,6 +157,7 @@
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
+    border-bottom: 1px solid var(--light-gray);
 }
 .job-card__namewrap{
     display: flex;
@@ -184,16 +185,31 @@
     border-radius: 8px;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #021A84);
 }
+
 .job-card__body{
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
+    position: relative;
 }
+
+.job-card__body::before{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50);
+    width: 1px;
+    height: 16px;
+    background-color: var(--light-gray);
+}
+
 .job-card__priceitem{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; 
 }
 .job-card__pricetext{
     font-size: 12px;
@@ -256,3 +272,95 @@
     user-select: none;
 }
 /* end list job */
+
+/* intro-wrap */
+.intro-wrap{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.heading-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sub-heading{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    color: #021A84;
+}
+.heading{
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    color: #00000080,#021A84;
+}
+.intro-card{
+    display: flex;
+    width: 1160px;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.intro-card__item{
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 16px;
+    background: #AAf0c2;
+}
+.intro-card__item:nth-child(1) {
+    background: var(--green-gradient);
+}
+.intro-card__item:nth-child(1) .intro-card__heading{
+    color: rgb(21 109 51);
+}
+.intro-card__item:nth-child(1) .intro-card__disc{
+    color: rgb(40 125 69);
+}    
+.intro-card__item:nth-child(2){
+    background: var(--purple-gradient);
+}
+.intro-card__item:nth-child(2) .intro-card__heading{
+    color: rgb(1 13 66);
+}
+.intro-card__item:nth-child(2) .intro-card__disc{
+    color: rgb(116 125 171);
+}
+.intro-card__item:nth-child(3){
+    background: var(--red-gradient);
+}
+.intro-card__item:nth-child(3) .intro-card__heading{
+    color: rgb(229 83 42);
+}
+.intro-card__item:nth-child(3) .intro-card__disc{
+    color: rgb(232 102 66);
+}
+.intro-card__heading{
+    align-self: stretch;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    color: var(--green-text);
+}
+.intro-card__disc{
+    align-self: stretch;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: #69b683;
+}
+/* end intro-wrap */
